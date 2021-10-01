@@ -56,3 +56,33 @@ print(Planet2.allCases.count)
 for currentPlanet in Planet2.allCases {
     print(currentPlanet)
 }
+
+
+//MARK: Ассоциативные значения
+print("\n//Ассоциативные значения")
+
+enum Barcode {
+    case upc(Int, Int, Int, Int)
+    case qrCode(String)
+}
+
+var productBarcode = Barcode.upc(8, 85909, 51226, 3)
+print(productBarcode)
+
+productBarcode = .qrCode("ABCDEFGHIJKLMNOP")
+
+switch productBarcode {
+case .upc(let number1, let number2, let number3, let number4):
+    print("UPC: \(number1), \(number2), \(number3), \(number4)")
+case .qrCode(let code):
+    print("QR code: \(code)")
+}
+
+productBarcode = .upc(8, 85909, 51226, 3)
+
+switch productBarcode {
+case let .upc(number1, number2, number3, number4):
+    print("UPC: \(number1), \(number2), \(number3), \(number4)")
+case let .qrCode(code):
+    print("QR code: \(code)")
+}

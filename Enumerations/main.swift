@@ -42,3 +42,17 @@ case .west:
 default:
     print("another")
 }
+
+
+//MARK: Итерация по кейсам перечисления
+print("\n//Итерация по кейсам перечисления")
+
+enum Planet2: CaseIterable {
+    case mercury, venus, earth, mars
+}
+
+print(Planet2.allCases.count)
+
+for currentPlanet in Planet2.allCases {
+    print(currentPlanet)
+}

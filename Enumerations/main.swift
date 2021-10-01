@@ -86,3 +86,16 @@ case let .upc(number1, number2, number3, number4):
 case let .qrCode(code):
     print("QR code: \(code)")
 }
+
+
+//MARK: Исходные значения
+print("\n//Исходные значения")
+
+enum someEnum: Character {
+    case numberZero = "0"
+    case numberOne = "1"
+}
+
+var someNumber: someEnum = .numberOne
+print(someNumber)
+print(someNumber.rawValue)

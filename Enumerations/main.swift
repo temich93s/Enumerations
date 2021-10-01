@@ -154,14 +154,16 @@ let product = ArithmeticExpression.multiplication(sum, ArithmeticExpression.numb
 func evaluate(_ expression: ArithmeticExpression) -> Int {
     switch expression {
     case let .number(value):
+        print(".number")
         return value
     case let .addition(left, right):
+        print(".addition")
         return evaluate(left) + evaluate(right)
     case let .multiplication(left, right):
+        print(".multiplication")
         return evaluate(left) * evaluate(right)
     }
 }
-
 
 print(evaluate(product))
 // Выведет "18"

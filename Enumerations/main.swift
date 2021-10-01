@@ -99,3 +99,30 @@ enum someEnum: Character {
 var someNumber: someEnum = .numberOne
 print(someNumber)
 print(someNumber.rawValue)
+
+
+//MARK: Неявно установленные исходные значения
+print("\n//Неявно установленные исходные значения")
+
+enum Planet3: String {
+    case mercury, venus, earth, mars
+}
+
+var somePlanet3: Planet3 = .earth
+print(somePlanet3.rawValue)
+
+enum Planet4: Int {
+    case mercury, venus, earth, mars
+}
+
+var somePlanet4: Planet4 = .earth
+print(somePlanet4.rawValue)
+
+enum Planet5: Int {
+    case mercury = 2, venus, earth, mars
+}
+
+var somePlanet5: Planet5 = .earth
+print(somePlanet5.rawValue)
+
+

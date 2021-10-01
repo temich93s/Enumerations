@@ -126,3 +126,12 @@ var somePlanet5: Planet5 = .earth
 print(somePlanet5.rawValue)
 
 
+//MARK: Инициализация через исходное значение
+print("\n//Инициализация через исходное значение")
+
+let myPlanet1 = Planet4(rawValue: 5)
+print(myPlanet1)
+
+let myPlanet2 = Planet4(rawValue: 2)
+print(myPlanet2)
+print(myPlanet2!)

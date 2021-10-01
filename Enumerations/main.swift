@@ -29,3 +29,16 @@ direction = .east
 
 var newPlanet = Planet.mercury
 newPlanet = .earth
+
+
+//MARK: Использование перечислений с инструкцией switch
+print("\n//Использование перечислений с инструкцией switch")
+
+switch direction {
+case .east:
+    print("east")
+case .west:
+    print("west")
+default:
+    print("another")
+}
